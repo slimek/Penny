@@ -1,0 +1,5 @@
+﻿/.idea/
+/vendor/
+/logs/*
+/data/*
+/config/settings.php
