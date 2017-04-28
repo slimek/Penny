@@ -10,12 +10,12 @@ date_default_timezone_set('Asia/Taipei');
 // PHP Autoloading
 //----------------------------------------------------------------------------------------------------------------------
 
-// ¥Ñ Composer ºŞ²zªº²Ä¤T¤è®M¥ó
+// ç”± Composer ç®¡ç†çš„ç¬¬ä¸‰æ–¹å¥—ä»¶
 require __DIR__ . '/../vendor/autoload.php';
 
-// ¨ä¥L¥Ø¿ıªºÃş§O¥[¦b³oÃä
+// å…¶ä»–ç›®éŒ„çš„é¡åˆ¥åŠ åœ¨é€™é‚Š
 
-// ±N src ¥Ø¿ı¤UªºÃş§O¥[¤J autoload ¾÷¨î¤¤
+// å°‡ src ç›®éŒ„ä¸‹çš„é¡åˆ¥åŠ å…¥ autoload æ©Ÿåˆ¶ä¸­
 spl_autoload_register(function ($className) {
     $filePath = str_replace('\\', '/', $className);
     require __DIR__ . '/../src/' . $filePath . '.php';
