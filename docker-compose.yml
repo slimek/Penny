@@ -7,7 +7,7 @@ services:
       - "80:80"
     volumes:
       - .:/srv/penny
-      - ./site-proxy.conf:/etc/nginx/conf.d/default.conf
+      - ./site.conf:/etc/nginx/conf.d/default.conf
       - ./log:/var/log/nginx
     links:
       - php
