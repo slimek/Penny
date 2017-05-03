@@ -8,6 +8,7 @@ services:
     volumes:
       - .:/srv/penny
       - ./nginx/site.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx/php-fpm:/etc/nginx/conf.d/php-fpm
       - ./log:/var/log/nginx
     links:
       - php
