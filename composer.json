@@ -10,8 +10,11 @@
     "php": "^7.0.0",
     
     "slim/slim": "^3.0",
-    "slimek/praline": "dev-master",
-    "monolog/monolog": "^1.20"
+
+    "akrabat/rka-ip-address-middleware": "0.5",
+    "monolog/monolog": "^1.20",
+
+    "slimek/praline": "dev-master"
   },
   
   "require-dev": {

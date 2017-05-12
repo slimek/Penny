@@ -30,13 +30,24 @@ $app->get('/echo', function (Request $request, Response $response) {
 });
 
 //----------------------------------------------------------------------------------------------------------------------
+// IP Controller
+// - 取得 request 來源 IP 的各種資訊
+//----------------------------------------------------------------------------------------------------------------------
+
+$app->get('/ip/{action}', function (Request $request, Response $response, $args) {
+
+    $controller = new Controllers\IpController();
+    $methodName = LetterCase::kebabToCamel($args['action']);
+    return $controller->{$methodName}($request, $response);
+
+})->add(new RKA\Middleware\IpAddress(true, []));
+
+//----------------------------------------------------------------------------------------------------------------------
 // Request Controller
 // - 用來檢查 requests 的內容是否正確
 //----------------------------------------------------------------------------------------------------------------------
 
 $app->any('/request/{action}', function (Request $request, Response $response, $args) {
-
-    $this->logger->debug('request/' . $args['action']);
 
     $controller = new Controllers\RequestController();
     $methodName = LetterCase::kebabToCamel($args['action']);

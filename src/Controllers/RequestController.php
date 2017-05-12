@@ -9,6 +9,7 @@ use Slim\Http\Response;
 // GET 和 POST 都可回應
 class RequestController
 {
+    // 查看 Body 拆解出 parameters 之後的內容，順便顯示 headers
     public function viewBody(Request $request, Response $response)
     {
         $params = $request->getParsedBody();
