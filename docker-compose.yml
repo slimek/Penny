@@ -17,3 +17,4 @@ services:
     image: nxtomoslimek/penny
     volumes:
       - .:/srv/penny
+      - ../praline:/srv/praline
