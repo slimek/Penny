@@ -22,5 +22,11 @@ $container['logger'] = function ($container) {
     $handler->setFormatter(new Monolog\Formatter\LineFormatter(null, null, true, true));
     $logger->pushHandler($handler);
 
+    $handler = new Dakatsuka\MonologFluentHandler\FluentHandler(
+        null,
+        $container->settings['fluentdHost']
+    );
+    $logger->pushHandler($handler);
+
     return $logger;
 };

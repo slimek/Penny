@@ -2,6 +2,7 @@
 namespace Controllers;
 
 // Composer
+use Monolog\Logger;
 use Slim\Http\Request;
 use Slim\Http\Response;
 
@@ -9,6 +10,14 @@ use Slim\Http\Response;
 // GET 和 POST 都可回應
 class RequestController
 {
+    /** @var  Logger */
+    private $logger;
+
+    public function __construct($container)
+    {
+        $this->logger = $container->logger;
+    }
+
     // 查看 Body 拆解出 parameters 之後的內容，順便顯示 headers
     public function viewBody(Request $request, Response $response)
     {

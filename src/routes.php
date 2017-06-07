@@ -36,7 +36,7 @@ $app->get('/echo', function (Request $request, Response $response) {
 
 $app->get('/ip/{action}', function (Request $request, Response $response, $args) {
 
-    $controller = new Controllers\IpController();
+    $controller = new Controllers\IpController($this);
     $methodName = LetterCase::kebabToCamel($args['action']);
     return $controller->{$methodName}($request, $response);
 
@@ -49,7 +49,7 @@ $app->get('/ip/{action}', function (Request $request, Response $response, $args)
 
 $app->any('/request/{action}', function (Request $request, Response $response, $args) {
 
-    $controller = new Controllers\RequestController();
+    $controller = new Controllers\RequestController($this);
     $methodName = LetterCase::kebabToCamel($args['action']);
     return $controller->{$methodName}($request, $response);
 });

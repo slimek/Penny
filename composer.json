@@ -14,6 +14,7 @@
     "akrabat/rka-ip-address-middleware": "0.5",
     "guzzlehttp/guzzle": "^6.0",
     "monolog/monolog": "^1.20",
+    "dakatsuka/monolog-fluent-handler": "1.2.0",
 
     "slimek/praline": "dev-master"
   },
