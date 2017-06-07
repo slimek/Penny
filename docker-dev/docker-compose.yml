@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  web:
+    image: nginx:1.13.0
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - ../nginx/php-fpm:/etc/nginx/conf.d/php-fpm
+      - ..:/srv/penny
+      - /var/log/nginx:/var/log/nginx
+    links:
+      - php
+      - fluentd
+
+  php:
+    image: php:7.0-fpm
+    volumes:
+      - ..:/srv/penny
+
+  fluentd:
+    image: fluent/fluentd:v0.12-debian
+    volumes:
+      - ./fluentd.conf:/fluentd/etc/fluent.conf
