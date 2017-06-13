@@ -1,0 +1,8 @@
+FROM php:7.0.18-fpm
+
+LABEL maintainer "Slimek Wu"
+
+COPY . /srv/penny
+
+RUN apt-get update \
+    && cp /srv/penny/config/settings.docker.php /srv/penny/config/settings.php
