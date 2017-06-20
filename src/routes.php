@@ -7,7 +7,7 @@
 
 use Slim\Http\Request;
 use Slim\Http\Response;
-use Praline\LetterCase;
+use Praline\Utils\LetterCase;
 
 //----------------------------------------------------------------------------------------------------------------------
 // 獨立 Actions

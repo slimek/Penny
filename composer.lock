@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8059c42742e23f0ec45469918b76361d",
-    "content-hash": "a62050f0a70fc1481665f070011b00dc",
+    "hash": "a3da7621ffa8ecf206d9c3c279fc0d12",
+    "content-hash": "fd5fb0e212ac94e9ef83ff8848257f5c",
     "packages": [
         {
             "name": "akrabat/rka-ip-address-middleware",
@@ -740,16 +740,16 @@
         },
         {
             "name": "slimek/praline",
-            "version": "0.0.1",
+            "version": "0.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/slimek/Praline.git",
-                "reference": "5e6f196cf9595f73539e68c17328febc9c50be3e"
+                "reference": "95d891a686c3dbb9cdbb07de75481ea82fe83930"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slimek/Praline/zipball/5e6f196cf9595f73539e68c17328febc9c50be3e",
-                "reference": "5e6f196cf9595f73539e68c17328febc9c50be3e",
+                "url": "https://api.github.com/repos/slimek/Praline/zipball/95d891a686c3dbb9cdbb07de75481ea82fe83930",
+                "reference": "95d891a686c3dbb9cdbb07de75481ea82fe83930",
                 "shasum": ""
             },
             "require": {
@@ -769,7 +769,7 @@
                 "MIT"
             ],
             "description": "PHP 7 Utility Library",
-            "time": "2017-06-16 08:03:56"
+            "time": "2017-06-19 10:04:11"
         }
     ],
     "packages-dev": [
