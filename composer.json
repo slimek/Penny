@@ -1,11 +1,11 @@
 {
   "name": "slimek/penny",
   "type": "project",
-  "description": "PHP 7 Practice Service",
+  "description": "PHP 7.1 Practice Service",
   "license": "MIT",
 
   "require": {
-    "php": "^7.0.0",
+    "php": "^7.1.0",
     
     "slim/slim": "^3.0",
 
@@ -14,7 +14,7 @@
     "guzzlehttp/guzzle": "^6.0",
     "monolog/monolog": "^1.20",
 
-    "slimek/praline": ">=0.0.2"
+    "slimek/praline": ">=0.0.4"
   },
   
   "require-dev": {

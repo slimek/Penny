@@ -7,7 +7,13 @@
 
 use Slim\Http\Request;
 use Slim\Http\Response;
+use Praline\Slim\Middleware\RouteLogger;
 use Praline\Utils\LetterCase;
+
+// Middleware
+$routeLogger = new RouteLogger($app->getContainer());
+
+$app->add($routeLogger);
 
 //----------------------------------------------------------------------------------------------------------------------
 // 獨立 Actions

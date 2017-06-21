@@ -14,10 +14,10 @@ services:
       - php
 
   php:
-    image: php:7.0.18-fpm
+    image: php:7.1.5-fpm
     volumes:
       - ..:/srv/penny
-      - ../../praline:/srv/praline
+      - /var/log/penny:/var/log/penny
     links:
       - fluentd
 
