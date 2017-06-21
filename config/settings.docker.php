@@ -4,6 +4,11 @@
 
 return [
 
+    // Logging
+
+    'enableFileLog' => getenv('ENABLE_FILE_LOG'),
+
+    'enableFluentdLog' => getenv('ENABLE_FLUENTD_LOG'),
     'fluentdHost' => getenv('FLUENTD_HOST'),
 
 
