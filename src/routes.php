@@ -35,6 +35,28 @@ $app->get('/echo', function (Request $request, Response $response) {
     return $response->withJson($params);
 });
 
+$app->get('/session-throttle', function (Request $request, Response $response) {
+
+    // 如果沒有被 SessionThrottler 擋下來，就回應一個 OK
+    return $response->withJson('OK');
+
+})->add(new Middleware\SessionThrottler(5, 10, function (Request $request, Response $response) {
+
+    return $response->withStatus(429);
+}));
+
+$app->get('/sqlite-throttle', function (Request $request, Response $response) {
+
+    // 如果沒有被 SqliteThrottler 擋下來，就回應一個 OK
+    return $response->withJson('OK');
+
+})->add(new Middleware\SqliteThrottler(5, 10,  function (Request $request, Response $response) {
+
+    return $response->withStatus(429);
+
+}))->add(new RKA\Middleware\IpAddress(true, []));
+
+
 //----------------------------------------------------------------------------------------------------------------------
 // IP Controller
 // - 取得 request 來源 IP 的各種資訊

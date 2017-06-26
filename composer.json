@@ -10,6 +10,7 @@
     "slim/slim": "^3.0",
 
     "akrabat/rka-ip-address-middleware": "0.5",
+    "bandwidth-throttle/token-bucket": "1.1.0",
     "dakatsuka/monolog-fluent-handler": "1.2.0",
     "guzzlehttp/guzzle": "^6.0",
     "monolog/monolog": "^1.20",

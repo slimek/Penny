@@ -14,7 +14,7 @@ services:
       - php
 
   php:
-    image: php:7.1.5-fpm
+    image: slimek/penny:0.1.0
     volumes:
       - ..:/srv/penny
       - /var/log/penny:/var/log/penny

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e8bd00188a030fc25a07d12bb27c2cfa",
-    "content-hash": "eb60a3e60303111daffdc9dfa4929589",
+    "hash": "bdd8d920eb0efdd18f8ff15d0ec6939c",
+    "content-hash": "b794a22270391d067be60811b4417c58",
     "packages": [
         {
             "name": "akrabat/rka-ip-address-middleware",
@@ -54,6 +54,62 @@
                 "psr7"
             ],
             "time": "2016-11-13 12:23:41"
+        },
+        {
+            "name": "bandwidth-throttle/token-bucket",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bandwidth-throttle/token-bucket.git",
+                "reference": "fa4244e6e549ab46ab28afe1722208df5e0fdef1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bandwidth-throttle/token-bucket/zipball/fa4244e6e549ab46ab28afe1722208df5e0fdef1",
+                "reference": "fa4244e6e549ab46ab28afe1722208df5e0fdef1",
+                "shasum": ""
+            },
+            "require": {
+                "ext-bcmath": "*",
+                "malkusch/lock": "^1",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "ext-redis": "^2.2.4|^3",
+                "mikey179/vfsstream": "^1.5.0",
+                "php-mock/php-mock-phpunit": "^1",
+                "phpunit/phpunit": "^5",
+                "predis/predis": "^1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "bandwidthThrottle\\tokenBucket\\": "classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "WTFPL"
+            ],
+            "authors": [
+                {
+                    "name": "Markus Malkusch",
+                    "email": "markus@malkusch.de",
+                    "homepage": "http://markus.malkusch.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Implementation of the Token Bucket algorithm.",
+            "homepage": "https://github.com/bandwidth-throttle/token-bucket",
+            "keywords": [
+                "bandwidth",
+                "rate limit",
+                "rate limiting",
+                "throttle",
+                "throttling",
+                "token bucket"
+            ],
+            "time": "2016-08-13 11:24:36"
         },
         {
             "name": "container-interop/container-interop",
@@ -178,16 +234,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.2.3",
+            "version": "6.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "8d6c6cc55186db87b7dc5009827429ba4e9dc006"
+                "reference": "f4db5a78a5ea468d4831de7f0bf9d9415e348699"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/8d6c6cc55186db87b7dc5009827429ba4e9dc006",
-                "reference": "8d6c6cc55186db87b7dc5009827429ba4e9dc006",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/f4db5a78a5ea468d4831de7f0bf9d9415e348699",
+                "reference": "f4db5a78a5ea468d4831de7f0bf9d9415e348699",
                 "shasum": ""
             },
             "require": {
@@ -197,8 +253,11 @@
             },
             "require-dev": {
                 "ext-curl": "*",
-                "phpunit/phpunit": "^4.0",
+                "phpunit/phpunit": "^4.0 || ^5.0",
                 "psr/log": "^1.0"
+            },
+            "suggest": {
+                "psr/log": "Required for using the Log middleware"
             },
             "type": "library",
             "extra": {
@@ -236,7 +295,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2017-02-28 22:50:30"
+            "time": "2017-06-22 18:50:49"
         },
         {
             "name": "guzzlehttp/promises",
@@ -353,6 +412,65 @@
                 "url"
             ],
             "time": "2017-03-20 17:10:46"
+        },
+        {
+            "name": "malkusch/lock",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/malkusch/lock.git",
+                "reference": "5555f291092a0ed5ab4f02d8be7031b877d8d165"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/malkusch/lock/zipball/5555f291092a0ed5ab4f02d8be7031b877d8d165",
+                "reference": "5555f291092a0ed5ab4f02d8be7031b877d8d165",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6",
+                "psr/log": "^1"
+            },
+            "require-dev": {
+                "ext-redis": "^2.2.4|^3",
+                "kriswallsmith/spork": "^0.3",
+                "mikey179/vfsstream": "^1.5.0",
+                "php-mock/php-mock-phpunit": "^1",
+                "phpunit/phpunit": "^5",
+                "predis/predis": "~1.0",
+                "zetacomponents/system-information": "~1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "malkusch\\lock\\": "classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "WTFPL"
+            ],
+            "authors": [
+                {
+                    "name": "Markus Malkusch",
+                    "email": "markus@malkusch.de",
+                    "homepage": "http://markus.malkusch.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Mutex library for exclusive code execution.",
+            "homepage": "https://github.com/malkusch/lock",
+            "keywords": [
+                "cas",
+                "flock",
+                "lock",
+                "memcache",
+                "mutex",
+                "redis",
+                "redlock",
+                "semaphore"
+            ],
+            "time": "2016-08-05 11:03:36"
         },
         {
             "name": "monolog/monolog",
