@@ -6,9 +6,9 @@ return [
 
     // Logging
 
-    'enableFileLog' => getenv('ENABLE_FILE_LOG'),
+    'enableFileLog' => filter_var(getenv('ENABLE_FILE_LOG'), FILTER_VALIDATE_BOOLEAN),
 
-    'enableFluentdLog' => getenv('ENABLE_FLUENTD_LOG'),
+    'enableFluentdLog' => filter_var(getenv('ENABLE_FLUENTD_LOG'), FILTER_VALIDATE_BOOLEAN),
     'fluentdHost' => getenv('FLUENTD_HOST'),
 
 
