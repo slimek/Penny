@@ -6,15 +6,15 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ../nginx/site.conf:/etc/nginx/conf.d/default.conf
-      - ../nginx/php-fpm:/etc/nginx/conf.d/php-fpm
+      - ../docker/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ../docker/php-fpm:/etc/nginx/conf.d/php-fpm
       - /var/log/nginx:/var/log/nginx
       - ..:/srv/penny
     links:
       - php
 
   php:
-    image: slimek/penny:0.1.0
+    image: slimek/penny:0.1.1
     volumes:
       - ..:/srv/penny
       - /var/log/penny:/var/log/penny
