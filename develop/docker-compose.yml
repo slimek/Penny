@@ -14,15 +14,25 @@ services:
       - php
 
   php:
-    image: slimek/penny:0.1.1
+    image: slimek/penny:0.2.0
     volumes:
       - ..:/srv/penny
       - /var/log/penny:/var/log/penny
     links:
       - fluentd
+      - mariadb
 
   fluentd:
     image: fluent/fluentd:v0.12-debian
     volumes:
       - ./fluentd.conf:/fluentd/etc/fluent.conf
       - /var/log/fluentd:/fluentd/log
+
+  mariadb:
+    image: mariadb:10.2.6
+    ports:
+      - "3306:3306"
+    volumes:
+      - /var/lib/mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=nxtomotp
