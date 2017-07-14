@@ -19,7 +19,7 @@ services:
       - /var/log/penny:/var/log/penny
     links:
       - fluentd
-      - mariadb
+      - mysql
 
   fluentd:
     image: fluent/fluentd:v0.12-debian
@@ -27,8 +27,8 @@ services:
       - ./fluentd.conf:/fluentd/etc/fluent.conf
       - /var/log/fluentd:/fluentd/log
 
-  mariadb:
-    image: mariadb:10.2.6
+  mysql:
+    image: mysql:5.7.18
     ports:
       - "3306:3306"
     volumes:
