@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bdd8d920eb0efdd18f8ff15d0ec6939c",
-    "content-hash": "b794a22270391d067be60811b4417c58",
+    "hash": "096996b8a4ad9b30866f6e9e84cc43af",
+    "content-hash": "9110763df645b9c49c0f64ff8b01d736",
     "packages": [
         {
             "name": "akrabat/rka-ip-address-middleware",
@@ -143,29 +143,34 @@
             "time": "2017-02-14 19:40:03"
         },
         {
-            "name": "dakatsuka/monolog-fluent-handler",
-            "version": "1.2.0",
+            "name": "danielstjules/stringy",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/dakatsuka/MonologFluentHandler.git",
-                "reference": "263397c599a58ccba78ab6cecbc66ac87272e82f"
+                "url": "https://github.com/danielstjules/Stringy.git",
+                "reference": "df24ab62d2d8213bbbe88cc36fc35a4503b4bd7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dakatsuka/MonologFluentHandler/zipball/263397c599a58ccba78ab6cecbc66ac87272e82f",
-                "reference": "263397c599a58ccba78ab6cecbc66ac87272e82f",
+                "url": "https://api.github.com/repos/danielstjules/Stringy/zipball/df24ab62d2d8213bbbe88cc36fc35a4503b4bd7e",
+                "reference": "df24ab62d2d8213bbbe88cc36fc35a4503b4bd7e",
                 "shasum": ""
             },
             "require": {
-                "fluent/logger": "0.3.*",
-                "monolog/monolog": "~1.6",
-                "php": ">=5.3"
+                "php": ">=5.4.0",
+                "symfony/polyfill-mbstring": "~1.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "Dakatsuka\\MonologFluentHandler": "src/"
-                }
+                "psr-4": {
+                    "Stringy\\": "src/"
+                },
+                "files": [
+                    "src/Create.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -173,41 +178,51 @@
             ],
             "authors": [
                 {
-                    "name": "Dai Akatsuka",
-                    "email": "d.akatsuka@gmail.com",
-                    "homepage": "https://github.com/dakatsuka/MonologFluentHandler"
+                    "name": "Daniel St. Jules",
+                    "email": "danielst.jules@gmail.com",
+                    "homepage": "http://www.danielstjules.com"
                 }
             ],
-            "description": "Fluentd Handler for Monolog",
+            "description": "A string manipulation library with multibyte support",
+            "homepage": "https://github.com/danielstjules/Stringy",
             "keywords": [
-                "fluentd",
-                "log",
-                "logger",
-                "logging"
+                "UTF",
+                "helpers",
+                "manipulation",
+                "methods",
+                "multibyte",
+                "string",
+                "utf-8",
+                "utility",
+                "utils"
             ],
-            "time": "2015-01-30 06:51:54"
+            "time": "2017-06-12 01:10:27"
         },
         {
             "name": "fluent/logger",
-            "version": "v0.3.8",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fluent/fluent-logger-php.git",
-                "reference": "245f3942608185dcd9d973e11bfd2ab4d796380c"
+                "reference": "c5a19ba8eb5e15f9ade72afeffba6b6e7eb51155"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fluent/fluent-logger-php/zipball/245f3942608185dcd9d973e11bfd2ab4d796380c",
-                "reference": "245f3942608185dcd9d973e11bfd2ab4d796380c",
+                "url": "https://api.github.com/repos/fluent/fluent-logger-php/zipball/c5a19ba8eb5e15f9ade72afeffba6b6e7eb51155",
+                "reference": "c5a19ba8eb5e15f9ade72afeffba6b6e7eb51155",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
+            "require-dev": {
+                "phpunit/phpunit": "~4.3",
+                "phpunit/phpunit-mock-objects": "2.3.0"
+            },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "Fluent": "src/"
+                "psr-4": {
+                    "Fluent\\Logger\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -222,15 +237,60 @@
                 {
                     "name": "Sotaro Karasawa",
                     "email": "sotarok@crocos.co.jp"
+                },
+                {
+                    "name": "DQNEO",
+                    "email": "dqneoo@gmail.com"
                 }
             ],
-            "description": "distributed logging for PHP 5.3",
+            "description": "a logging library for Fluentd",
             "homepage": "http://github.com/fluent/fluent-logger-php",
             "keywords": [
                 "log",
                 "logging"
             ],
-            "time": "2014-07-15 12:39:13"
+            "time": "2017-02-15 07:14:53"
+        },
+        {
+            "name": "gabordemooij/redbean",
+            "version": "v4.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gabordemooij/redbean.git",
+                "reference": "d0944d7f966d7f45a0d973981fe3f64aff0050f0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gabordemooij/redbean/zipball/d0944d7f966d7f45a0d973981fe3f64aff0050f0",
+                "reference": "d0944d7f966d7f45a0d973981fe3f64aff0050f0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "RedBeanPHP\\": "RedBeanPHP"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "New BSD and GPLv2"
+            ],
+            "authors": [
+                {
+                    "name": "Gabor de Mooij",
+                    "email": "gabor@redbeanphp.com",
+                    "homepage": "http://redbeanphp.com"
+                }
+            ],
+            "description": "RedBeanPHP ORM",
+            "homepage": "http://redbeanphp.com/",
+            "keywords": [
+                "orm"
+            ],
+            "time": "2017-03-07 22:26:54"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -595,25 +655,29 @@
         },
         {
             "name": "pimple/pimple",
-            "version": "v3.0.2",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silexphp/Pimple.git",
-                "reference": "a30f7d6e57565a2e1a316e1baf2a483f788b258a"
+                "reference": "279b56046fb368deacf77e2f8f3bdcea45cc367a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/a30f7d6e57565a2e1a316e1baf2a483f788b258a",
-                "reference": "a30f7d6e57565a2e1a316e1baf2a483f788b258a",
+                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/279b56046fb368deacf77e2f8f3bdcea45cc367a",
+                "reference": "279b56046fb368deacf77e2f8f3bdcea45cc367a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": ">=5.3.0",
+                "psr/container": "^1.0"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "^3.2"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0.x-dev"
+                    "dev-master": "3.1.x-dev"
                 }
             },
             "autoload": {
@@ -637,7 +701,53 @@
                 "container",
                 "dependency injection"
             ],
-            "time": "2015-09-11 15:10:35"
+            "time": "2017-07-03 14:06:46"
+        },
+        {
+            "name": "psr/cache",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/cache.git",
+                "reference": "d11b50ad223250cf17b86e38383413f5a6764bf8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/cache/zipball/d11b50ad223250cf17b86e38383413f5a6764bf8",
+                "reference": "d11b50ad223250cf17b86e38383413f5a6764bf8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Cache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for caching libraries",
+            "keywords": [
+                "cache",
+                "psr",
+                "psr-6"
+            ],
+            "time": "2016-08-06 20:24:11"
         },
         {
             "name": "psr/container",
@@ -858,23 +968,29 @@
         },
         {
             "name": "slimek/praline",
-            "version": "0.0.4",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/slimek/Praline.git",
-                "reference": "2471d9f1b777f1c42e00b1791389d9b9392d398c"
+                "reference": "23a77ff1b9ebd5aa3841ec393e5cfcb21ba944d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slimek/Praline/zipball/2471d9f1b777f1c42e00b1791389d9b9392d398c",
-                "reference": "2471d9f1b777f1c42e00b1791389d9b9392d398c",
+                "url": "https://api.github.com/repos/slimek/Praline/zipball/23a77ff1b9ebd5aa3841ec393e5cfcb21ba944d6",
+                "reference": "23a77ff1b9ebd5aa3841ec393e5cfcb21ba944d6",
                 "shasum": ""
             },
             "require": {
+                "akrabat/rka-ip-address-middleware": "^0.5.0",
+                "danielstjules/stringy": "^3.1.0",
+                "fluent/logger": "^1.0.0",
                 "php": ">=7.1.0",
-                "psr/log": "^1.0"
+                "psr/cache": "^1.0.1",
+                "psr/log": "^1.0",
+                "slim/slim": "^3.0"
             },
             "require-dev": {
+                "cache/array-adapter": "^0.5.0",
                 "phpunit/phpunit": "^6.0"
             },
             "type": "library",
@@ -888,7 +1004,66 @@
                 "MIT"
             ],
             "description": "PHP 7.1 Utility Library",
-            "time": "2017-06-21 10:40:35"
+            "time": "2017-07-10 10:43:36"
+        },
+        {
+            "name": "symfony/polyfill-mbstring",
+            "version": "v1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-mbstring.git",
+                "reference": "f29dca382a6485c3cbe6379f0c61230167681937"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/f29dca382a6485c3cbe6379f0c61230167681937",
+                "reference": "f29dca382a6485c3cbe6379f0c61230167681937",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-mbstring": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for the Mbstring extension",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "mbstring",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2017-06-09 14:24:12"
         }
     ],
     "packages-dev": [
@@ -1551,16 +1726,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "6.2.2",
+            "version": "6.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "f2786490399836d2a544a34785c4a8d3ab32cf0e"
+                "reference": "fa5711d0559fc4b64deba0702be52d41434cbcb7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/f2786490399836d2a544a34785c4a8d3ab32cf0e",
-                "reference": "f2786490399836d2a544a34785c4a8d3ab32cf0e",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/fa5711d0559fc4b64deba0702be52d41434cbcb7",
+                "reference": "fa5711d0559fc4b64deba0702be52d41434cbcb7",
                 "shasum": ""
             },
             "require": {
@@ -1631,20 +1806,20 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-06-13 14:07:07"
+            "time": "2017-07-03 15:54:24"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "4.0.1",
+            "version": "4.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "eabce450df194817a7d7e27e19013569a903a2bf"
+                "reference": "d8833b396dce9162bb2eb5d59aee5a3ab3cfa5b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/eabce450df194817a7d7e27e19013569a903a2bf",
-                "reference": "eabce450df194817a7d7e27e19013569a903a2bf",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/d8833b396dce9162bb2eb5d59aee5a3ab3cfa5b4",
+                "reference": "d8833b396dce9162bb2eb5d59aee5a3ab3cfa5b4",
                 "shasum": ""
             },
             "require": {
@@ -1690,7 +1865,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2017-03-03 06:30:20"
+            "time": "2017-06-30 08:15:21"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -1855,16 +2030,16 @@
         },
         {
             "name": "sebastian/environment",
-            "version": "3.0.4",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/environment.git",
-                "reference": "74776f8dbc081cab9287c2a601c0c1d842568744"
+                "reference": "cd0871b3975fb7fc44d11314fd1ee20925fce4f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/74776f8dbc081cab9287c2a601c0c1d842568744",
-                "reference": "74776f8dbc081cab9287c2a601c0c1d842568744",
+                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/cd0871b3975fb7fc44d11314fd1ee20925fce4f5",
+                "reference": "cd0871b3975fb7fc44d11314fd1ee20925fce4f5",
                 "shasum": ""
             },
             "require": {
@@ -1876,7 +2051,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0.x-dev"
+                    "dev-master": "3.1.x-dev"
                 }
             },
             "autoload": {
@@ -1901,7 +2076,7 @@
                 "environment",
                 "hhvm"
             ],
-            "time": "2017-06-20 16:25:05"
+            "time": "2017-07-01 08:51:00"
         },
         {
             "name": "sebastian/exporter",
@@ -2348,7 +2523,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.1.0"
+        "php": "~7.1"
     },
     "platform-dev": []
 }

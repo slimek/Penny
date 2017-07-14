@@ -9,6 +9,9 @@ date_default_timezone_set('Asia/Taipei');
 // 啟動 Session，才能使用 Middleware\SessionThrottle
 session_start();
 
+// 設定 RedBeanPHP
+define('REDBEAN_MODEL_PREFIX', 'Models\\');
+
 //----------------------------------------------------------------------------------------------------------------------
 // PHP Autoloading
 //----------------------------------------------------------------------------------------------------------------------

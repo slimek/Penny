@@ -26,10 +26,7 @@ $container['logger'] = function ($container) {
 
     if ($settings['enableFluetndLog']) {
         // 透過 Fluentd 輸出 log
-        $handler = new Dakatsuka\MonologFluentHandler\FluentHandler(
-            null,
-            $container->settings['fluentdHost']
-        );
+        $handler = new Praline\Monolog\MonologFluentHandler($container->settings['fluentdHost']);
         $logger->pushHandler($handler);
     }
 

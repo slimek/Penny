@@ -81,3 +81,15 @@ $app->any('/request/{action}', function (Request $request, Response $response, $
     $methodName = LetterCase::kebabToCamel($args['action']);
     return $controller->{$methodName}($request, $response);
 });
+
+//----------------------------------------------------------------------------------------------------------------------
+// RedBean Controller
+// - 練習 RedBean 程式庫
+//----------------------------------------------------------------------------------------------------------------------
+
+$app->post('/red-bean/{action}', function (Request $request, Response $response, $args) {
+
+    $controller = new Controllers\RedBeanController($this);
+    $methodName = LetterCase::kebabToCamel($args['action']);
+    return $controller->{$methodName}($request, $response);
+});
