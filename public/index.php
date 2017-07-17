@@ -42,4 +42,7 @@ $app = new \Slim\App(['settings' => $settings]);
 require __DIR__ . '/../src/dependencies.php';
 require __DIR__ . '/../src/routes.php';
 
+// Propel 組態設定
+require __DIR__ . '/../src/propel.php';
+
 $app->run();

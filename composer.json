@@ -14,9 +14,9 @@
     "gabordemooij/redbean": "^4.3.4",
     "guzzlehttp/guzzle": "^6.0",
     "monolog/monolog": "^1.20",
+    "propel/propel": "2.0.0-alpha7",
 
-    "slimek/praline": "^0.2.1",
-    "propel/propel": "2.0.0-alpha7"
+    "slimek/praline": "^0.2.1"
   },
   
   "require-dev": {

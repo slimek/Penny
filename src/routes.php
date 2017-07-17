@@ -93,3 +93,15 @@ $app->post('/red-bean/{action}', function (Request $request, Response $response,
     $methodName = LetterCase::kebabToCamel($args['action']);
     return $controller->{$methodName}($request, $response);
 });
+
+//----------------------------------------------------------------------------------------------------------------------
+// Propel Controller
+// - 練習 Propel 程式庫
+//----------------------------------------------------------------------------------------------------------------------
+
+$app->post('/propel/{action}', function (Request $request, Response $response, $args) {
+
+    $controller = new Controllers\PropelController($this);
+    $methodName = LetterCase::kebabToCamel($args['action']);
+    return $controller->{$methodName}($request, $response);
+});

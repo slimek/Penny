@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database name="bookstore" defaultIdMethod="native">
+    <table name="books" phpName="Book" namespace="PropelModels">
+        <column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+        <column name="title" type="varchar" size="255" required="true"/>
+        <column name="author_id" type="integer" required="true"/>
+        <foreign-key foreignTable="authors" phpName="Author">
+            <reference local="author_id" foreign="id"/>
+        </foreign-key>
+    </table>
+    <table name="authors" phpName="Author" namespace="PropelModels">
+        <column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+        <column name="name" type="varchar" size="128" required="true"/>
+    </table>
+</database>

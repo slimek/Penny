@@ -1,0 +1,23 @@
+propel:
+  paths:
+    phpDir: ../src  # propel model:build 會自己加上 namespace 的目錄
+    phpConfDir: ../config
+
+  database:
+    connections:
+      bookstore:
+        adapter: mysql
+        classname: Propel\Runtime\Connection\ConnectionWrapper
+        dsn: "mysql:host=127.0.0.1;dbname=penny"
+        user: root
+        password: nxtomotp
+
+  runtime:
+    defaultConnection: bookstore
+    connections:
+      - bookstore
+
+  generator:
+    defaultConnection: bookstore
+    connections:
+      - bookstore
