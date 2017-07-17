@@ -23,8 +23,12 @@ require __DIR__ . '/../vendor/autoload.php';
 
 // 將 src 目錄下的類別加入 autoload 機制中
 spl_autoload_register(function ($className) {
-    $filePath = str_replace('\\', '/', $className);
-    require __DIR__ . '/../src/' . $filePath . '.php';
+    $filePath = __DIR__ . '/../src/' . str_replace('\\', '/', $className) . '.php';
+    if (file_exists($filePath)) {
+        require $filePath;
+    } else {
+        return false;  // 不能擲出異常，否則 class_exists() 會出問題
+    }
 });
 
 //----------------------------------------------------------------------------------------------------------------------
