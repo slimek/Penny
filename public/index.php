@@ -10,7 +10,7 @@ date_default_timezone_set('Asia/Taipei');
 session_start();
 
 // 設定 RedBeanPHP
-define('REDBEAN_MODEL_PREFIX', 'Models\\');
+define('REDBEAN_MODEL_PREFIX', 'RedBeanModels\\');
 
 //----------------------------------------------------------------------------------------------------------------------
 // PHP Autoloading

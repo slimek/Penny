@@ -1,5 +1,5 @@
 <?php
-namespace Models;
+namespace RedBeanModels;
 
 use RedBeanPHP\SimpleModel;
 
