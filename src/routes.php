@@ -105,3 +105,15 @@ $app->post('/propel/{action}', function (Request $request, Response $response, $
     $methodName = LetterCase::kebabToCamel($args['action']);
     return $controller->{$methodName}($request, $response);
 });
+
+//----------------------------------------------------------------------------------------------------------------------
+// Twig Controller
+// - 練習 Twig 程式庫
+//----------------------------------------------------------------------------------------------------------------------
+
+$app->get('/twig/{action}', function (Request $request, Response $response, $args) {
+
+    $controller = new Controllers\TwigController($this);
+    $methodName = LetterCase::kebabToCamel($args['action']);
+    return $controller->{$methodName}($request, $response);
+});
