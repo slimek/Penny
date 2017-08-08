@@ -15,8 +15,9 @@
     "guzzlehttp/guzzle": "^6.0",
     "monolog/monolog": "^1.20",
     "propel/propel": "2.0.0-alpha7",
+    "twig/twig": "^2.4",
 
-    "slimek/praline": "^0.2.1"
+    "slimek/praline": "^0.5.1"
   },
   
   "require-dev": {

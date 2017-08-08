@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2da27fa6014f3cbcfd257d95b3ff84b2",
-    "content-hash": "000cd46c3d11a81ff60a6d6ee3787de5",
+    "hash": "82d2cbd37591c17d2563caf55868b482",
+    "content-hash": "5584d691e6f5e664c4b5df647dc5231e",
     "packages": [
         {
             "name": "akrabat/rka-ip-address-middleware",
@@ -1033,22 +1033,23 @@
         },
         {
             "name": "slimek/praline",
-            "version": "0.2.1",
+            "version": "0.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/slimek/Praline.git",
-                "reference": "23a77ff1b9ebd5aa3841ec393e5cfcb21ba944d6"
+                "reference": "3ab11cd4a37c43bdad5e4034754b1cc203734b63"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slimek/Praline/zipball/23a77ff1b9ebd5aa3841ec393e5cfcb21ba944d6",
-                "reference": "23a77ff1b9ebd5aa3841ec393e5cfcb21ba944d6",
+                "url": "https://api.github.com/repos/slimek/Praline/zipball/3ab11cd4a37c43bdad5e4034754b1cc203734b63",
+                "reference": "3ab11cd4a37c43bdad5e4034754b1cc203734b63",
                 "shasum": ""
             },
             "require": {
                 "akrabat/rka-ip-address-middleware": "^0.5.0",
                 "danielstjules/stringy": "^3.1.0",
                 "fluent/logger": "^1.0.0",
+                "monolog/monolog": "^1.20",
                 "php": ">=7.1.0",
                 "psr/cache": "^1.0.1",
                 "psr/log": "^1.0",
@@ -1069,7 +1070,7 @@
                 "MIT"
             ],
             "description": "PHP 7.1 Utility Library",
-            "time": "2017-07-10 10:43:36"
+            "time": "2017-08-07 10:12:14"
         },
         {
             "name": "symfony/config",
@@ -1613,6 +1614,72 @@
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
             "time": "2017-06-15 12:58:50"
+        },
+        {
+            "name": "twig/twig",
+            "version": "v2.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twigphp/Twig.git",
+                "reference": "eab7c3288ae6603d7d6f92b531626af2b162d1f2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/eab7c3288ae6603d7d6f92b531626af2b162d1f2",
+                "reference": "eab7c3288ae6603d7d6f92b531626af2b162d1f2",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0",
+                "symfony/polyfill-mbstring": "~1.0"
+            },
+            "require-dev": {
+                "psr/container": "^1.0",
+                "symfony/debug": "~2.7",
+                "symfony/phpunit-bridge": "~3.3@dev"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Twig_": "lib/"
+                },
+                "psr-4": {
+                    "Twig\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Armin Ronacher",
+                    "email": "armin.ronacher@active-4.com",
+                    "role": "Project Founder"
+                },
+                {
+                    "name": "Twig Team",
+                    "homepage": "http://twig.sensiolabs.org/contributors",
+                    "role": "Contributors"
+                }
+            ],
+            "description": "Twig, the flexible, fast, and secure template language for PHP",
+            "homepage": "http://twig.sensiolabs.org",
+            "keywords": [
+                "templating"
+            ],
+            "time": "2017-06-07 18:47:58"
         }
     ],
     "packages-dev": [
