@@ -8,6 +8,8 @@ use Twig\Environment;
 use Twig\Loader\ArrayLoader;
 use Twig\Loader\FilesystemLoader;
 
+define('FIRST_CONSTANT', 'My First Constant');
+
 class TwigController extends Controller
 {
     public function __construct($container)
@@ -43,6 +45,9 @@ class TwigController extends Controller
 
         echo $twig->render('first-page.html.twig', [
             'navigation' => $navigation,
+            'heading' => 'My First Page',
+            'name' => 'alice margatroid',
+            'list' => ['apple', 'banana', 'cherry'],
         ]);
         return $response;
     }

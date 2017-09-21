@@ -4,12 +4,39 @@
         <title>My First Page</title>
     </head>
     <body>
-        <h1>My First Page</h1>
+        <h1>{{ heading }}</h1>
         <ul id="navigation">
         {% for item in navigation %}
             <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
         {% endfor %}
         </ul>
-        {{ variable }}
+        <h2>Global Variables</h2>
+        <ul>
+            <li>_self : {{ _self }}</li>
+            <li>_context : {{ _context }}</li>
+            <li>_charset : {{ _charset }}</li>
+        </ul>
+        <h2>Filters</h2>
+        <ul>
+            <li>Title : {{ name|title }}</li>
+            <li>Join : {{ list|join(', ') }}</li>
+        </ul>
+        <h2>Constants</h2>
+        <ul>
+            <li>{{ constant('FIRST_CONSTANT') }}</li>
+        </ul>
+        <h2>Loop</h2>
+        <ul>
+        {% for i in 0..2 %}
+            <li>{{ list[i] }}</li>
+        {% endfor %}
+        </ul>
+        <h2>Block</h2>
+        {% block task %}Give a Task{% endblock %}
+        <ul>
+        {% for j in 0..2 %}
+            <li>{{ block('task') }}</li>
+        {% endfor %}
+        </ul>
     </body>
 </html>
